@@ -1,0 +1,28 @@
+{
+  "name": "bookmyshow-clone",
+  "version": "1.0.0",
+  "description": "Full-stack BookMyShow clone with React, Node.js, Express, and MongoDB",
+  "main": "index.js",
+  "scripts": {
+    "install-all": "cd backend && npm install && cd ../frontend && npm install",
+    "seed": "cd backend && node seedDatabase.js",
+    "dev": "concurrently \"cd backend && npm run dev\" \"cd frontend && npm start\"",
+    "backend": "cd backend && npm run dev",
+    "frontend": "cd frontend && npm start",
+    "build": "cd frontend && npm run build"
+  },
+  "keywords": [
+    "bookmyshow",
+    "movie-booking",
+    "ticket-booking",
+    "mern-stack",
+    "react",
+    "nodejs",
+    "mongodb"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

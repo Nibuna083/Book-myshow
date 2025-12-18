@@ -1,0 +1,269 @@
+.movie-details-page {
+  min-height: calc(100vh - 60px);
+  background: #f5f5f5;
+}
+
+.movie-banner {
+  background: #1f1f1f;
+  color: white;
+  padding: 30px 0;
+  position: relative;
+  overflow: hidden;
+  min-height: auto;
+}
+
+.movie-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.7) 50%, rgba(0,0,0,0.95) 100%);
+  z-index: 1;
+}
+
+.banner-content {
+  display: flex;
+  gap: 25px;
+  align-items: flex-start;
+  padding: 0;
+  position: relative;
+  z-index: 2;
+}
+
+.movie-poster {
+  width: 180px;
+  height: 270px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+  flex-shrink: 0;
+}
+
+.movie-details {
+  flex: 1;
+  max-width: 700px;
+  padding-top: 0;
+}
+
+.movie-details h1 {
+  font-size: 2.2rem;
+  margin-bottom: 12px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.2;
+}
+
+.movie-rating {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255,255,255,0.12);
+  padding: 5px 12px;
+  border-radius: 4px;
+}
+
+.movie-rating::before {
+  content: '⭐';
+  font-size: 1.1rem;
+}
+
+.movie-meta {
+  font-size: 0.92rem;
+  margin-bottom: 16px;
+  color: #d1d1d1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.movie-meta span {
+  padding: 4px 0;
+}
+
+.movie-meta span:not(:last-child)::after {
+  content: '•';
+  margin-left: 8px;
+  opacity: 0.5;
+}
+
+.movie-description {
+  line-height: 1.6;
+  margin-bottom: 16px;
+  font-size: 0.92rem;
+  color: #e0e0e0;
+  max-width: 650px;
+}
+
+.movie-cast, .movie-director {
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+  color: #d1d1d1;
+}
+
+.movie-cast strong, .movie-director strong {
+  color: #fff;
+  font-weight: 600;
+  margin-right: 6px;
+}
+
+.shows-section {
+  padding: 35px 0 60px;
+  background: #f5f5f5;
+}
+
+.shows-section h2 {
+  margin-bottom: 24px;
+  color: #333;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.date-selector {
+  margin-bottom: 28px;
+}
+
+.date-selector input {
+  padding: 12px 16px;
+  font-size: 0.95rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 6px;
+  background: white;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+
+.date-selector input:hover {
+  border-color: #f84464;
+}
+
+.date-selector input:focus {
+  outline: none;
+  border-color: #f84464;
+  box-shadow: 0 0 0 3px rgba(248, 68, 100, 0.1);
+}
+
+.theatres-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.theatre-shows {
+  background: white;
+  padding: 20px 24px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  border: 1px solid #e8e8e8;
+  transition: box-shadow 0.2s ease;
+}
+
+.theatre-shows:hover {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+
+.theatre-shows h3 {
+  color: #222;
+  margin-bottom: 4px;
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+.theatre-address {
+  color: #777;
+  font-size: 0.88rem;
+  margin-bottom: 16px;
+  line-height: 1.4;
+}
+
+.show-times {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.show-time-btn {
+  padding: 12px 20px;
+  background: white;
+  border: 1.5px solid #1fa463;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1fa463;
+  min-width: 85px;
+}
+
+.show-time-btn:hover {
+  background: #1fa463;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(31, 164, 99, 0.25);
+}
+
+.show-time-btn:active {
+  transform: translateY(0);
+}
+
+.show-format {
+  font-size: 0.72rem;
+  font-weight: 500;
+  margin-top: 3px;
+  opacity: 0.8;
+}
+
+.no-shows {
+  text-align: center;
+  padding: 50px 20px;
+  color: #999;
+  font-size: 1.05rem;
+  background: white;
+  border-radius: 8px;
+  margin-top: 20px;
+  border: 1px dashed #e0e0e0;
+}
+
+@media (max-width: 768px) {
+  .banner-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 30px 0;
+  }
+
+  .movie-poster {
+    width: 200px;
+    height: 300px;
+  }
+
+  .movie-details h1 {
+    font-size: 2rem;
+  }
+
+  .movie-meta {
+    justify-content: center;
+  }
+
+  .theatre-shows {
+    padding: 16px 18px;
+  }
+
+  .show-times {
+    gap: 8px;
+  }
+
+  .show-time-btn {
+    min-width: 75px;
+    padding: 10px 16px;
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,86 @@
+.navbar {
+  background: #333338;
+  color: white;
+  padding: 0.75rem 0;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #f84464;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  letter-spacing: -0.5px;
+}
+
+.navbar-brand::before {
+  content: 'Book';
+  color: white;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.navbar-links a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  font-weight: 400;
+  font-size: 0.9rem;
+  padding: 6px 12px;
+  border-radius: 4px;
+}
+
+.navbar-links a:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #f84464;
+}
+
+.user-name {
+  color: white;
+  margin-left: 10px;
+  font-weight: 400;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.user-name::before {
+  content: '👤';
+  font-size: 1.1rem;
+}
+
+.navbar-links .btn {
+  margin-left: 10px;
+  background: transparent;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 0.4rem 1.2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 400;
+  font-size: 0.85rem;
+}
+
+.navbar-links .btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #f84464;
+  color: #f84464;
+}

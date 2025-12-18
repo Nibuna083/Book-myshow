@@ -1,0 +1,243 @@
+.seat-selection-page {
+  padding: 25px 0;
+  min-height: calc(100vh - 60px);
+  background: #f8f8f8;
+}
+
+.show-info {
+  background: white;
+  padding: 20px 30px;
+  border-radius: 8px;
+  margin-bottom: 25px;
+  text-align: center;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  border-bottom: 3px solid #f84464;
+}
+
+.show-info h2 {
+  color: #222;
+  margin-bottom: 8px;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.show-info p {
+  color: #666;
+  font-size: 0.95rem;
+  margin: 4px 0;
+}
+
+.screen-container {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.screen {
+  width: 70%;
+  max-width: 500px;
+  margin: 0 auto 25px;
+  background: linear-gradient(to bottom, #2c3e50, #34495e);
+  padding: 10px;
+  border-radius: 0 0 50% 50%;
+  color: #ecf0f1;
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+  text-transform: uppercase;
+}
+
+.seats-container {
+  background: white;
+  padding: 35px;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  margin-bottom: 25px;
+  overflow-x: auto;
+}
+
+.seat-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  gap: 8px;
+  justify-content: center;
+}
+
+.row-label {
+  width: 35px;
+  font-weight: 700;
+  color: #555;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.seats {
+  display: flex;
+  gap: 8px;
+  flex-wrap: nowrap;
+}
+
+.seat {
+  width: 30px;
+  height: 30px;
+  border-radius: 4px 4px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+  font-weight: 600;
+}
+
+.seat.available {
+  background: #e8e8e8;
+  color: #666;
+  border: 1.5px solid #ccc;
+}
+
+.seat.available:hover {
+  transform: scale(1.1);
+  background: #5cb85c;
+  color: white;
+  border-color: #5cb85c;
+  box-shadow: 0 3px 8px rgba(92, 184, 92, 0.3);
+}
+
+.seat.selected {
+  background: #5cb85c;
+  color: white;
+  transform: scale(1.1);
+  border: 2px solid #4cae4c;
+  box-shadow: 0 4px 10px rgba(92, 184, 92, 0.4);
+}
+
+.seat.booked {
+  background: #bbb;
+  color: #888;
+  cursor: not-allowed;
+  border: 1.5px solid #999;
+}
+
+.seat.locked {
+  background: #ffa726;
+  color: white;
+  cursor: not-allowed;
+  border: 1.5px solid #ff9800;
+}
+
+.seat-legend {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 25px;
+  padding: 18px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  flex-wrap: wrap;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.legend-item .seat {
+  width: 28px;
+  height: 28px;
+  cursor: default;
+}
+
+.booking-summary {
+  position: sticky;
+  bottom: 0;
+  background: white;
+  padding: 20px 25px;
+  border-radius: 0;
+  box-shadow: 0 -3px 10px rgba(0,0,0,0.12);
+  border-top: 2px solid #f84464;
+  z-index: 100;
+}
+
+.summary-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 20px;
+}
+
+.selected-seats-info p {
+  margin-bottom: 6px;
+  color: #222;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.selected-seats-info p:last-child {
+  color: #f84464;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+.booking-summary .btn {
+  padding: 14px 45px;
+  font-size: 1.05rem;
+  white-space: nowrap;
+  background: #f84464;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.booking-summary .btn:hover:not(:disabled) {
+  background: #e63950;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(248, 68, 100, 0.35);
+}
+
+.booking-summary .btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+@media (max-width: 768px) {
+  .summary-content {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .booking-summary .btn {
+    width: 100%;
+    padding: 12px 30px;
+  }
+  
+  .seat {
+    width: 26px;
+    height: 26px;
+    font-size: 9px;
+  }
+
+  .seats-container {
+    padding: 25px 15px;
+  }
+
+  .seat-legend {
+    gap: 15px;
+    padding: 15px;
+  }
+}
