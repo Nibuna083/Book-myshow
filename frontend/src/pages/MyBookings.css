@@ -4,8 +4,9 @@
 }
 
 .my-bookings-page h1 {
-  color: #2c3e50;
+  color: #000000;
   margin-bottom: 30px;
+  font-weight: 700;
 }
 
 .no-bookings {
@@ -17,7 +18,7 @@
 }
 
 .no-bookings p {
-  color: #7f8c8d;
+  color: #666666;
   font-size: 18px;
   margin-bottom: 20px;
 }
@@ -50,9 +51,10 @@
 }
 
 .booking-header h3 {
-  color: #2c3e50;
+  color: #000000;
   font-size: 24px;
   margin: 0;
+  font-weight: 700;
 }
 
 .status {
@@ -63,23 +65,24 @@
 }
 
 .status-confirmed {
-  background: #d4edda;
-  color: #155724;
+  background: #c8e6c9;
+  color: #1b5e20;
 }
 
 .status-pending {
-  background: #fff3cd;
-  color: #856404;
+  background: var(--accent);
+  color: #000000;
+  font-weight: 700;
 }
 
 .status-cancelled {
-  background: #f8d7da;
-  color: #721c24;
+  background: #ffcdd2;
+  color: #b71c1c;
 }
 
 .status-expired {
-  background: #e2e3e5;
-  color: #383d41;
+  background: #e0e0e0;
+  color: #424242;
 }
 
 .booking-details {
@@ -95,7 +98,7 @@
 }
 
 .detail-item .label {
-  color: #7f8c8d;
+  color: #666666;
   font-weight: 500;
 }
 

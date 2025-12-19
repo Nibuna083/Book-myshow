@@ -47,7 +47,7 @@
 }
 
 .auth-switch a {
-  color: #e74c3c;
+  color: var(--primary);
   text-decoration: none;
   font-weight: 500;
 }

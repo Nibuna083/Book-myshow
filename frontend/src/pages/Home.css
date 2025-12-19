@@ -1,15 +1,15 @@
 .home-page {
   min-height: 90vh;
-  background: #f5f5f5;
+  background: #ffffff;
   padding: 0;
 }
 
 .home-hero {
-  background: linear-gradient(to right, #1f1f1f 0%, #2c2c2c 100%);
+  background: linear-gradient(to right, var(--primary) 0%, #ffe082 100%);
   padding: 50px 20px 40px;
   text-align: center;
-  color: white;
-  border-bottom: 3px solid #f84464;
+  color: #000000;
+  border-bottom: 3px solid #000000;
 }
 
 .home-hero h1 {
@@ -17,13 +17,14 @@
   margin-bottom: 10px;
   font-weight: 700;
   letter-spacing: -1px;
+  color: #000000;
 }
 
 .home-hero .subtitle {
   font-size: 1.1rem;
-  color: rgba(255, 255, 255, 0.75);
+  color: #333333;
   margin-bottom: 0;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .home-container {
@@ -34,9 +35,9 @@
 
 .section-title {
   font-size: 1.5rem;
-  color: #333;
+  color: #000000;
   margin-bottom: 30px;
-  font-weight: 600;
+  font-weight: 700;
   text-align: left;
   padding-left: 5px;
 }
@@ -54,10 +55,10 @@
   overflow: hidden;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   position: relative;
   height: 160px;
-  border: 1px solid #f2f2f2;
+  border: 2px solid #f5c542;
 }
 
 .city-card::before {
@@ -67,30 +68,30 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(248, 68, 100, 0.85) 0%, rgba(248, 68, 100, 0.95) 100%);
-  opacity: 0.92;
+  background: linear-gradient(135deg, rgba(245,197,66,0.9) 0%, rgba(245,197,66,1) 100%);
+  opacity: 0.85;
   transition: opacity 0.3s ease;
 }
 
 .city-card:nth-child(2)::before {
-  background: linear-gradient(135deg, rgba(99, 102, 241, 0.85) 0%, rgba(99, 102, 241, 0.95) 100%);
+  background: linear-gradient(135deg, rgba(245,197,66,0.8) 0%, rgba(255,224,130,0.95) 100%);
 }
 
 .city-card:nth-child(3)::before {
-  background: linear-gradient(135deg, rgba(16, 185, 129, 0.85) 0%, rgba(16, 185, 129, 0.95) 100%);
+  background: linear-gradient(135deg, rgba(245,197,66,0.85) 0%, rgba(245,197,66,0.95) 100%);
 }
 
 .city-card:nth-child(4)::before {
-  background: linear-gradient(135deg, rgba(245, 158, 11, 0.85) 0%, rgba(245, 158, 11, 0.95) 100%);
+  background: linear-gradient(135deg, rgba(245,197,66,0.9) 0%, rgba(255,224,130,0.9) 100%);
 }
 
 .city-card:nth-child(5)::before {
-  background: linear-gradient(135deg, rgba(139, 92, 246, 0.85) 0%, rgba(139, 92, 246, 0.95) 100%);
+  background: linear-gradient(135deg, rgba(245,197,66,0.8) 0%, rgba(245,197,66,0.95) 100%);
 }
 
 .city-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.12);
+  box-shadow: 0 8px 16px rgba(245,197,66,0.3);
 }
 
 .city-card:hover::before {
@@ -99,14 +100,28 @@
 
 .city-content {
   position: relative;
-  z-index: 1;
-  height: 100%;
+  z-index: 2;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  padding: 20px;
-  color: white;
+  align-items: center;
+  height: 100%;
+  text-align: center;
+}
+
+.city-content h3 {
+  color: #000000;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: -0.3px;
+}
+
+.city-content p {
+  color: #333333;
+  font-size: 0.75rem;
+  margin: 2px 0 0;
+  font-weight: 500;
 }
 
 .city-icon {

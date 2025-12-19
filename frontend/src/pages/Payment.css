@@ -1,7 +1,7 @@
 .payment-page {
   padding: 40px 0;
   min-height: calc(100vh - 60px);
-  background: #f5f5f5;
+  background: #ffffff;
 }
 
 .payment-container {
@@ -17,24 +17,26 @@
   text-align: center;
   margin-bottom: 30px;
   padding: 20px;
-  background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
-  color: white;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  color: #000000;
   border-radius: 10px;
 }
 
 .timer-section h3 {
   margin-bottom: 10px;
   font-size: 16px;
+  color: #000000;
 }
 
 .timer {
   font-size: 48px;
   font-weight: bold;
   font-family: 'Courier New', monospace;
+  color: #000000;
 }
 
 .booking-details {
-  background: #f8f9fa;
+  background: #f5f5f5;
   padding: 20px;
   border-radius: 10px;
   margin-bottom: 30px;
@@ -42,7 +44,7 @@
 
 .booking-details h2 {
   margin-bottom: 20px;
-  color: #2c3e50;
+  color: #000000;
   font-size: 22px;
 }
 
@@ -50,7 +52,8 @@
   display: flex;
   justify-content: space-between;
   padding: 10px 0;
-  border-bottom: 1px solid #ecf0f1;
+  border-bottom: 1px solid #e5e5e5;
+  color: #333333;
 }
 
 .detail-row:last-child {
@@ -60,8 +63,10 @@
 .detail-row.total {
   margin-top: 10px;
   padding-top: 15px;
-  border-top: 2px solid #2c3e50;
+  border-top: 2px solid #000000;
   font-size: 18px;
+  color: #000000;
+  font-weight: 700;
 }
 
 .payment-methods {
@@ -70,7 +75,8 @@
 
 .payment-methods h3 {
   margin-bottom: 15px;
-  color: #2c3e50;
+  color: #000000;
+  font-weight: 700;
 }
 
 .payment-options {
@@ -83,20 +89,20 @@
   display: flex;
   align-items: center;
   padding: 15px;
-  border: 2px solid #ecf0f1;
+  border: 2px solid #e5e5e5;
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 .payment-options label:hover {
-  border-color: #3498db;
-  background: #f8f9fa;
+  border-color: var(--primary);
+  background: #fffef5;
 }
 
 .payment-options label.selected {
-  border-color: #3498db;
-  background: #ebf5fb;
+  border-color: var(--primary);
+  background: #fffff0;
 }
 
 .payment-options input[type="radio"] {
@@ -124,30 +130,33 @@
 }
 
 .btn-secondary {
-  background: #6c757d;
-  color: white;
+  background: #000000;
+  color: var(--primary);
   border: none;
   border-radius: 6px;
   cursor: pointer;
   transition: all 0.3s ease;
+  font-weight: 600;
 }
 
 .btn-secondary:hover:not(:disabled) {
-  background: #5a6268;
+  background: var(--primary);
+  color: #000000;
   transform: translateY(-2px);
 }
 
 .btn-danger {
-  background: #dc3545;
+  background: #d32f2f;
   color: white;
   border: none;
   border-radius: 6px;
   cursor: pointer;
   transition: all 0.3s ease;
+  font-weight: 600;
 }
 
 .btn-danger:hover:not(:disabled) {
-  background: #c82333;
+  background: #b71c1c;
   transform: translateY(-2px);
 }
 
